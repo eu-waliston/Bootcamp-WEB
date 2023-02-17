@@ -28,6 +28,6 @@
 <h4>Frequency<h4/>
 <ul>
   <li>Tuesday</li>
-  <li>Friday</li>
+  <li>Thursday</li>
 </ul>
 <div/>
