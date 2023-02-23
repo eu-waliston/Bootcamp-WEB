@@ -1,0 +1,13 @@
+#h1__text {
+    color: rgb(255, 0, 191);
+    font-size: 50px;
+}
+
+img {
+    width: 150px;
+    border-radius: 100px;
+}
+
+.bacon {
+    background-color: blueviolet;
+}
