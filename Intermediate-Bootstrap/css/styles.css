@@ -129,3 +129,15 @@ p {
 .pricing-column {
     padding: 3% 2% !important;
 }
+
+
+@media screen and (max-width: 1080px) {
+    #title {
+        text-align: center;
+    }
+
+    #title__image {
+        position: static !important;
+        transform: rotate(0deg) !important;
+    }
+}
