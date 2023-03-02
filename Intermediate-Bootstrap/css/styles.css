@@ -8,7 +8,7 @@
 }
 
 .container-fluid {
-    padding: 3% 15% !important;
+    padding: 3% 15%  7% !important;
 }
 
 
@@ -62,13 +62,18 @@ p {
 
 /* Title Image */
 #title__image {
-    width: 60% !important;
+    width: 320px !important;
     transform: rotate(25deg) !important;
+    position: absolute !important;
+    right: 20% !important;
 }
 
 /* Fatures Section  */
 #features {
-    padding:  7% 20% !important;
+    padding:  7% 15% !important;
+    z-index: 1;
+    position: relative;
+    background-color: #fff !important;
 }
 
 .feature-box {
