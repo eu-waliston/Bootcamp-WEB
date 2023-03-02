@@ -130,7 +130,43 @@ p {
     padding: 3% 2% !important;
 }
 
+/* CTA Section */
+#cta {
+    background-color: #ff4c68;
+    padding:  7% 15% !important;
+    text-align: center;
+}
 
+#cta h3 {
+    font-size: 3.5rem !important;
+    line-height: 1.5 !important;
+    color: #fff !important;
+}
+
+#footer {
+    background-color: #fff;
+    padding:  5% 15% !important;
+    text-align: center;
+}
+
+.footer-icon {
+    font-size: 30px !important;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    color: #ff4c68;
+}
+
+.container p {
+    font-size: 20px !important;
+    margin-top: 10px !important;
+    text-align: center !important;
+    position: relative;
+    margin-left: -15px;
+}
+
+.bi-c-circle {
+    margin-right: 10px !important;
+}
 @media screen and (max-width: 1080px) {
     #title {
         text-align: center;
