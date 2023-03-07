@@ -13,8 +13,8 @@ console.log("You aleady use: " + post.length + " charactes");
 
 
 //Slicing and Extracting Parts of a String
-let name = "waliston";
-console.log(name.slice(0,1));
+let nome = "waliston";
+console.log(nome.slice(0,1));
 console.log(post.slice(0,140));
 
 
