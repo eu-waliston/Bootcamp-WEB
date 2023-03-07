@@ -13,6 +13,11 @@ console.log("You aleady use: " + post.length + " charactes");
 
 
 //Slicing and Extracting Parts of a String
-let name = "Waliston";
+let name = "waliston";
 console.log(name.slice(0,1));
 console.log(post.slice(0,140));
+
+
+// Challenge Changing Casing in Text
+console.log(post.toUpperCase());
+console.log(post.toLowerCase());
