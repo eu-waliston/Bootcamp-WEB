@@ -11,9 +11,19 @@ breakFast();
 
 //Functions - PT 2 Parameters and Arguments
 function doMath(money) {
-    return Math.floor(money / 1.5);
+   let iceCream = Math.floor(money / 1.5);
+
+    console.log("With $5 you can buy: " + iceCream + " ice creams");
 }
 let iceCream = doMath(5);
-console.log("With $5 you can buy: " + iceCream + " ice creams");
 
 //Functions Part 3 Outputs & Return Values
+
+function buyBread(money) {
+    return money / 3.5 
+}
+
+let breadsOnBeg = Math.floor(buyBread(15));
+
+
+console.log("With $15 you can buy: " + breadsOnBeg +" breads");
