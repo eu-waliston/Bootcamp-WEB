@@ -5,11 +5,10 @@ function chalange() {
     let b = "8";
     // ******* Don't change the code above 👆 *********
 
-    let aux1 = a;
-    let aux2 = b;
+    let c = a;
+    a = b
+    b = c
 
-    a = aux2;
-    b = aux1;
 
     // ******* Don't change the code below 👇 *********
     console.log("a is " + a);
