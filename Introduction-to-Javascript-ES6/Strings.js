@@ -11,3 +11,8 @@ let post = "Tempor nostrud mollit velit qui dolor quis consequat pariatur sunt p
 
 console.log("You aleady use: " + post.length + " charactes");
 
+
+//Slicing and Extracting Parts of a String
+let name = "Waliston";
+console.log(name.slice(0,1));
+console.log(post.slice(0,140));
