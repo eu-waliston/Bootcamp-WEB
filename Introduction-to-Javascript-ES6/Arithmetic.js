@@ -29,3 +29,21 @@ console.log(num9 % 2);
 let humanAge = 22;
 let dogAge = 7
 console.log("Your dog has: " + (((dogAge - 2) * 4) + 21));
+
+
+//Increment and Decrement Expressions
+
+/*
+    ++
+    --
+    +=
+    -=
+    *=
+    /=
+*/
+
+let increment = 15;
+console.log(++increment);
+
+let decrement = 20;
+console.log(--decrement);
