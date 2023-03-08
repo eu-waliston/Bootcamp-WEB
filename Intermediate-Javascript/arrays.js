@@ -17,8 +17,8 @@ console.log(guests.includes("Alex"));
 
 //Adding Elements and Intermediate Array Techniques
 //Push, Pop
-var output = [];
-var count = 1;
+let output = [];
+let count = 1;
 
 function fizzBuzz() {
     if (count % 2 === 0) {
