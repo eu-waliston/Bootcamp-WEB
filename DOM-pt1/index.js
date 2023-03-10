@@ -1,2 +1,3 @@
-alert("Open the Console log")
-console.log("DOM 🚀");
+document.querySelector("input").click();
+
+let name = document.getElementsByClassName('list')[2].innerHTML = "Waliston";
