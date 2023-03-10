@@ -7,9 +7,6 @@ document.getElementsByClassName('list')[2].innerHTML = "Waliston";
 document.querySelector("li a").style.color = "white"
 
 document.querySelector("h1").style.color = "white"
-document.querySelector("h1").style.fontFamily = "sans-serif"
-document.querySelector("h1").style.textAlign = "center"
-
 
 document.querySelector("button").style.backgroundColor = "blue"
 
