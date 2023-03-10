@@ -13,9 +13,11 @@ document.querySelector("button").style.backgroundColor = "blue"
 let btn = document.querySelector("button").addEventListener('click', () => {
     let body = document.querySelector("body")
     let h1 = document.querySelector("h1")
+    let a = document.querySelector("li a")
 
     body.classList.toggle('colors')
     h1.classList.toggle("huge")
+    a.setAttribute("target", "_blank")
 })
 
 
