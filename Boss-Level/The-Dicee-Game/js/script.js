@@ -38,9 +38,11 @@ function DRAW() {
   draw.classList.add("txt2");
   results.appendChild(draw);
 }
+
 function roolDice() {
   let random1 = Math.floor(Math.random() * imagesArray.length);
   let random2 = Math.floor(Math.random() * imagesArray.length);
+
   D1.src = imagesArray[random1];
   D2.src = imagesArray[random2];
 
