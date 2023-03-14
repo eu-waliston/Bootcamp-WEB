@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    ---font-base: 'Lobster', cursive;
+    ---font-highligh: 'Lobster Two', cursive;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: #3F497F;
+}
+
+#controls {
+    text-align: center;
+}
+
+#controls h1 {
+    font-size: 6rem;
+    color: #fff;
+    position: relative;
+    top: 20px;
+    font-family: var(---font-base);
+}
+
+#controls button {
+    position: relative;
+    top: 60px;
+    padding: 15px;
+    font-size: 1.5rem;
+    font-family: var(---font-highligh);
+    border-radius: 5px;
+    border: none;
+
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.63);
+
+    cursor: pointer;
+}
+
+#controls button:active {
+    transform: translateY(8px);
+    box-shadow: -3px -3px 15px rgba(0, 0, 0, 0.63);
+}
+
+#dice-table {
+    width: 800px;
+    height: 500px;
+    background-color: #fff;
+    position: relative;
+    margin: 0 auto;
+
+    margin-top: 100px;
+
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 10px rgba(0, 0, 0, 0.192);
+
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+#p1, #p2 {
+    margin-top: 10%;
+    color: #3F497F;
+    letter-spacing: 2px;
+    font-family: var(---font-base);
+    text-align: center;
+    width: 40%;
+}
+
+.d1 {
+    margin-top: 55px;
+}
+
+.sf {
+    margin-left: -90px;
+    margin-top: -55px;
+}
+#results {
+    margin-top: 5%;
+    margin: 0 auto;
+    width: 500px;
+    height: 130px;
+    margin-top: 25px;
+}
+
+.txt1 {
+    text-align: center;
+    position: relative;
+    top: 50px;
+    font-size: 2.5rem;
+    color: #fff;
+    font-family: var(---font-highligh);
+    letter-spacing: 1px;
+}
+
+.txt2 {
+    text-align: center;
+    position: relative;
+    top: 50px;
+    font-size: 2.5rem;
+    color: #fff;
+    font-family: var(---font-highligh);
+    letter-spacing: 1px;
+}
+
+.loser {
+    display: none;
+}
