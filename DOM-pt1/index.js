@@ -2,8 +2,6 @@ document.querySelector("input").click();
 
 document.getElementsByClassName('list')[2].innerHTML = "Waliston";
 
-
-
 document.querySelector("li a").style.color = "white"
 
 document.querySelector("h1").style.color = "white"
