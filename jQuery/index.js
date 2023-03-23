@@ -31,3 +31,11 @@ $("h1").prepend("<button>PREPEND</button>")
 $("h1").append("<button>APPEND</button>")
 
 // $("button").remove();
+
+// $("button").click( function() {
+//     $("h1").fadeToggle()
+// })
+
+$("button").click( function() {
+    $("h1").slideUp().slideDown().animate({opacity: 0.5})
+})
