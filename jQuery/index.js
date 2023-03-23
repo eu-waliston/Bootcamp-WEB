@@ -24,3 +24,10 @@ $("h1").on("click", function() {
     $("h1").css("text-shadow" ,"7px 7px 35px rgba(0,0,0, 030)")
 })
 
+$("h1").before("<button>BEFORE</button>")
+$("h1").after("<button>AFTER</button>")
+
+$("h1").prepend("<button>PREPEND</button>")
+$("h1").append("<button>APPEND</button>")
+
+// $("button").remove();
