@@ -4,8 +4,23 @@ $("h1").addClass("big-title");
 
 $("h1").text("Bye!");
 
-$("button").html("<strong>click me</strong>")
+$("button").html("<strong>click me</strong>");
 
 // console.log($("img").attr("src"))
 
-$("a").attr("href", "https://www.xvideos.com")
+$("a").attr("href", "https://www.youtube.com");
+
+$("button").click(function (e) {
+  e.preventDefault();
+  $("h1").css("color", "pink");
+});
+
+
+$("input").keypress(function(event) {
+    $("h1").text(event.key)
+})
+
+$("h1").on("click", function() {
+    $("h1").css("text-shadow" ,"7px 7px 35px rgba(0,0,0, 030)")
+})
+
