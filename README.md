@@ -22,12 +22,3 @@
  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white">
  <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">
 <div />
-
- 
-<div align="left">
-<h4>Frequency<h4/>
-<ul>
-  <li>Tuesday</li>
-  <li>Thursday</li>
-</ul>
-<div/>
