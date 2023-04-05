@@ -1,15 +1,21 @@
 const express = require("express");
 const https = require("https");
 require("dotenv").config();
+const path = require("path");
 
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  const URL = `https://api.weatherapi.com/v1/current.json?key=${process.env.API_KEY}&q=Brazil&aqi=no`;
+  res.sendFile(path.join(__dirname, "..", "/index.html"));
+});
+
+router.post("/", (req, res) => {
+  console.log(req.body.cityName);
+  let query = req.body.cityName;
+
+  const URL = `https://api.weatherapi.com/v1/current.json?key=${process.env.API_KEY}&q=${query}&aqi=no`;
 
   https.get(URL, function (response) {
-    console.log(response.statusCode);
-
     response.on("data", function (data) {
       const weatherList = JSON.parse(data);
       let city = weatherList.location.name;
@@ -26,8 +32,7 @@ router.get("/", (req, res) => {
 
       res.write(`<h1>Temperatura: <br /> ${temp_c} </h1>`);
       res.write(`<h1>Condition: <br /> ${cond} </h1>`);
-      res.write(`<img alt="icon" src=${icon} />`)
-
+      res.write(`<img alt="icon" src=${icon} />`);
 
       res.send();
 
