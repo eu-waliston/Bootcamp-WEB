@@ -11,6 +11,8 @@ const App = express();
 App.use(bodyParser.urlencoded({extended: true}))
 App.use(express.json())
 
+App.use(express.static('public'))
+
 //Routes
 App.use("/", rootRouter);
 
