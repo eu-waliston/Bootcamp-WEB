@@ -2,14 +2,13 @@ const express = require("express");
 const router = express.Router();
 const path = require("path");
 const https = require("https");
-require('dotenv').config()
+require("dotenv").config();
 
 router.get("/", (req, res) => {
   res.status(200).sendFile(path.join(__dirname, "..", "public", "signup.html"));
 });
 
 router.post("/", (req, res) => {
-
   const firstName = req.body.fName;
   const lastName = req.body.lName;
   const email = req.body.email;
@@ -29,19 +28,22 @@ router.post("/", (req, res) => {
 
   let jsonDate = JSON.stringify(data);
 
-  const url = `https://us21.api.mailchimp.com/3.0/lists/${process.env.LIST_ID}`
+  const url = `https://us21.api.mailchimp.com/3.0/lists/${process.env.LIST_ID}`;
 
   const option = {
     method: "POST",
-    auth: `walwizard:${process.env.API_KEY}`
-  }
+    auth: `walwizard:${process.env.API_KEY}`,
+  };
 
-  const request = https.request(url, option, function(response) {
-    response.on("data", function(data) {
+  const request = https.request(url, option, function (response) {
+
+    response.statusCode === 200 ? res.sendFile(path.join(__dirname, "..", "public", "success.html")) :  res.sendFile(path.join(__dirname, "..", "public", "failure.html"))
+
+
+    response.on("data", function (data) {
       console.log(JSON.parse(data));
-    })
-  })
-
+    });
+  });
 
   request.write(jsonDate);
   request.end();
