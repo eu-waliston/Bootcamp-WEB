@@ -9,6 +9,8 @@ const server = express();
 server.use(bodyParser.urlencoded({ extended: true }))
 server.use(express.json());
 
+server.set('view engine', 'ejs');
+
 server.use("/", rootRouter)
 
 server.listen(PORT, () => {
