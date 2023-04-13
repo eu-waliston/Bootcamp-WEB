@@ -9,6 +9,9 @@ const server = express();
 server.use(bodyParser.urlencoded({ extended: true }))
 server.use(express.json());
 
+//static files
+server.use(express.static('public'))
+
 server.set('view engine', 'ejs');
 
 server.use("/", rootRouter)

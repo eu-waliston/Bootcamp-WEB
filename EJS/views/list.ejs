@@ -7,14 +7,18 @@
     <title>To Do List</title>
   </head>
   <body>
-    <% if (kindOfday === "Thursday") { %>
-    <h1 style="color: pink; font-family: 'Courier New', Courier, monospace">
-      It's a <%= kindOfday %>
-    </h1>
-    <% } else { %>
-    <h1 style="color: pink; font-family: 'Courier New', Courier, monospace">
-      It's a <%= kindOfday %>
-    </h1>
-    <% } %>
+    <h1><%= kindOfday %></h1>
+
+    <ul> 
+      <% for( let i = 0; i < newListItems.length; i++ ) { %>
+        <li><%= newListItems[i] %></li>
+      <% } %>
+
+    </ul>
+
+    <form action="/" method="post" class="form__section">
+      <input type="text" name="newItem" class="form__input">
+      <button type="submit" name="button" class="btn-Add">Add</button>
+    </form>
   </body>
 </html>
