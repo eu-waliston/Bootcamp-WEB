@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-let tasks = ["Buy Food", "Cook Food", "Eat Food"];
+let tasks = ["ir ao mercado", "cortar o cabelo"];
 
 router.get("/", (req, res) => {
 
