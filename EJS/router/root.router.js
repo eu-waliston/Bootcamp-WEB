@@ -1,19 +1,14 @@
 const express = require("express");
 const router = express.Router();
+const path = require("path")
+
+const date = require(path.join(__dirname, "..", "date.js"));
 
 let tasks = ["ir ao mercado", "cortar o cabelo"];
 let workItems = [];
 
 router.get("/", (req, res) => {
-  let today = new Date();
-
-  let options = {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-  };
-
-  let day = today.toLocaleDateString("pt-BR", options);
+  let day = date();
 
   res.render("list", { listTitle: day, newListItems: tasks });
 });
