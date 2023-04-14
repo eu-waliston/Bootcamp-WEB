@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To Do List</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-  </head>
+<%- include('header') %>
   <body>
     <div class="box" id="heading">
-      <h1 style="text-transform: capitalize;"><%= kindOfday %></h1>
+      <h1 style="text-transform: capitalize;"><%= listTitle %></h1>
     </div>
     <div class="box">
 
@@ -23,8 +14,7 @@
      
       <form action="/" method="post" class="form__section">
         <input type="text" name="newItem" class="form__input" placeholder="nova tarefa"/>
-        <button type="submit" name="button" class="btn-Add"><i class="bi bi-plus"></i></button>
+        <button type="submit" name="list" value=<%= listTitle %> class="btn-Add"><i class="bi bi-plus"></i></button>
       </form>
     </div>
-  </body>
-</html>
+<%- include('footer') %>
