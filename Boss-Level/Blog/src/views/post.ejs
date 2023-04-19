@@ -1,0 +1,20 @@
+<%- include('templates/header'); %>
+  <body>
+    <%- include('templates/menu') %>
+    <div class="post">
+        <h1 class="new__post">New Post</h1>
+        <form action="/home" method="POST" class="post__sc">
+            <label>Author</label>
+            <input type="text" name="author" class="input__form">
+
+            <label>Title</label>
+            <input type="text" name="title" class="input__form">
+
+            <label>Article</label>
+            <textarea rows="10" cols="70" name="article"></textarea>
+
+            <button type="submit" class="btn">send</button>
+        </form>
+    </div>
+  </body>
+<%- include('templates/bottom') %>

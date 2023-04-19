@@ -1,7 +1,118 @@
 * {
-    font-family: 'Poppins', sans-serif;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+.nav {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(9, 156, 66);
+}
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  top: 20px;
+}
+
+.blog__logo {
+  color: #ffffff;
+  text-shadow: 3px 3px 45px rgba(0, 0, 0, 0.45);
+  border-radius: 10px;
+  position: relative;
+  top: 3px;
+}
+
+.nav__itens {
+  text-decoration: none;
+  margin-left: 30px;
+  color: #fff;
+  text-transform: uppercase;
+}
+/* about section */
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  top: 110px;
+}
+
+.icon {
+  width: 220px;
+  background-color: rgb(20, 196, 87);
+  text-align: center;
+  height: 220px;
+  border-radius: 100%;
+  box-shadow: 4px 4px 45px rgba(0, 0, 0, 0.23);
+}
+
+.icon__img {
+  width: 200px;
+  position: relative;
+  top: 10px;
+  border-radius: 100px;
+}
+
+.about__me {
+    text-align: center;
+    width: 800px;
+    position: relative;
+    top: 30px;
+    font-size: 1.3rem;
+}
+
+/* post section */
+.new__post {
+  color: rgb(20, 196, 87);
+  text-transform: uppercase;
+  position: relative;
+  top: 60px;
+  font-size: 2.5rem;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.post__sc {
+  display: grid;
+  gap: 10px;
+  position: relative;
+  top: 120px;
+}
+
+.input__form {
+  height: 40px;
+}
+
+.input__form__article {
+  height: 90px;
+}
+
+.btn {
+  width: 150px;
+  height: 50px;
+  position: relative;
+  margin-left: 43%;
+  top: 40%;
+
+  font-size: 1rem;
+  text-transform: uppercase;
+  border: none;
+  background-color: rgb(9, 156, 66);
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transition: 0.5s;
+  background-color: rgb(20, 196, 87);
 }
