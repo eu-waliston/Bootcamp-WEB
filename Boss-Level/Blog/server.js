@@ -1,7 +1,6 @@
 const express = require('express');
 
 require('dotenv').config();
-const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require("cors")
 
@@ -13,9 +12,11 @@ const server = express();
 server.use(express.json());
 server.use(express.urlencoded({extended: true}))
 server.use(bodyParser.urlencoded({ extended: true }));
+server.use(cors());
 
 //static and engine
-// server.use();
+server.use(express.static('public'));
+server.set('view engine', 'ejs');
 
 //db connection
 require('./src/config/db');
