@@ -1,8 +1,18 @@
 <%- include('templates/header'); %>
-  <body>
-    <%- include('templates/menu') %>
-    <div class="articles">
+<body>
+  <%- include('templates/menu') %> <% for( let i = 0; i < allArticles.length;
+  i++ ) { %>
+  <div class="articles">
+    <div class="article">
+      <br />
+      <h4>Auhor: <span class="author"><%= allArticles[i].author %></span></h4>
+      <h4>Title: <span class="author"><%= allArticles[i].title %></span></h4>
+      <br />
 
+      <h4>Article:</h4>
+      <p><%= allArticles[i].article %></p>
     </div>
-  </body>
+  </div>
+  <% } %>
+</body>
 <%- include('templates/bottom') %>

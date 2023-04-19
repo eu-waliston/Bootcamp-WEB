@@ -31,6 +31,29 @@
   color: #fff;
   text-transform: uppercase;
 }
+.articles {
+  background-color: rgb(9, 156, 66);
+  width: 50%;
+  top: 40px;
+  position: relative;
+  margin-left: 25%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 45px rgba(0, 0, 0, 0.23);
+}
+
+.article {
+  position: relative;
+
+  margin-bottom: 30px;
+  color: #fff;
+  padding: 10px;
+  top: -18px;
+}
+
+.author {
+  font-weight: 100;
+}
+
 /* about section */
 .about {
   display: flex;
@@ -59,11 +82,11 @@
 }
 
 .about__me {
-    text-align: center;
-    width: 800px;
-    position: relative;
-    top: 30px;
-    font-size: 1.3rem;
+  text-align: center;
+  width: 800px;
+  position: relative;
+  top: 30px;
+  font-size: 1.3rem;
 }
 
 /* post section */
