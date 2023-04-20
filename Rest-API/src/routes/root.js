@@ -12,4 +12,15 @@ rootRouter.get("/articles", async (req, res) => {
   }
 });
 
+rootRouter.post('/articles', async (req,res) => {
+    let newArticle = new Articles(req.body);
+    try {
+        newArticle.save()
+        res.status(200).send(newArticle);
+    } catch (error) {
+        res.status(500).send(error)
+    }
+
+})
+
 module.exports = rootRouter;
