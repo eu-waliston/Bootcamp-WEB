@@ -2,7 +2,6 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const ejs = require("ejs");
 
 const rootRouter = require('./routes/root.router');
 
@@ -14,6 +13,8 @@ api.use(cors());
 
 api.set('view engine', 'ejs')
 api.use(express.static("public"))
+
+require('./config/database');
 
 api.use('/', rootRouter);
 
