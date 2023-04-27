@@ -28,6 +28,7 @@ rootRouter.post("/register", async (req, res) => {
     console.log(user);
   } catch (error) {
     res.status(500).send({ error: "Can't Create a user :( " });
+    console.log(error);
   }
 });
 
@@ -35,11 +36,10 @@ rootRouter.post("/login", async (req, res) => {
   let ussername = req.body.email;
   let password = req.body.password;
 
-  let user = await CreateUser.findOne({email: ussername}).exec();
-    
+  let user = await CreateUser.findOne({ email: ussername }).exec();
+
   if (user) {
     res.status(200).render(path.join(__dirname, "..", "views", "secrets.ejs"));
-
   } else {
     res.status(200).render(path.join(__dirname, "..", "views", "login.ejs"));
   }
