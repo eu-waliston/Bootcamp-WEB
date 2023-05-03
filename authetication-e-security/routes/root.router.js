@@ -42,22 +42,30 @@ rootRouter.post("/register", (req, res) => {
 
 rootRouter.post("/login", async (req, res) => {
   let ussername = req.body.email;
-  let userPassword = req.body.password;
-  let str = userPassword.toString();
+  let password = req.body.password;
 
-  let user = CreateUser.findOne({ password: str });
+  let user = CreateUser.findOne({ email: ussername });
+  let pass = CreateUser.findOne({ password: password });
+  let passToSTR = pass.toString();
 
+  if (user) {
+    bcrypt.compare(password, passToSTR).then(function (result) {
+      if (result == false) {
+        res
+          .status(200)
+          .render(path.join(__dirname, "..", "views", "secrets.ejs"));
+      } else {
+        res.status(200).render(path.join(__dirname, "..", "views", "login.ejs"));
+      }
+    });
+  } else {
+    res.status(200).render(path.join(__dirname, "..", "views", "login.ejs"));
+    console.log(err);
+  }
 
-  bcrypt.compare(str, user, function (err, result) {
-    if (result) {
-      res
-        .status(200)
-        .render(path.join(__dirname, "..", "views", "secrets.ejs"));
-    } else {
-      res.status(200).render(path.join(__dirname, "..", "views", "login.ejs"));
-      console.log(err);
-    }
-  });
+  // bcrypt.compare(pass, user, function (err, result) {
+
+  // });
 });
 
 module.exports = rootRouter;
