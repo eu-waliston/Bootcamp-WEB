@@ -3,6 +3,7 @@ const rootRouter = express.Router();
 const path = require("path");
 
 const CreateUser = require("../models/user.model.js");
+const FindUser  = require("../models/user.model.js");
 
 rootRouter.get("/", (req, res) => {
   res.status(200).render(path.join(__dirname, "..", "views", "home.ejs"));
@@ -40,35 +41,17 @@ rootRouter.post("/register", (req, res) => {
   });
 });
 
-rootRouter.post("/login", async (req, res) => {
-  let ussername = req.body.email;
-  let password = req.body.password;
+rootRouter.post("/login", async function(req,res) {
+  const username = req.body.email;
+  const password = req.body.password;
 
-  let user = CreateUser.findOne({ email: ussername });
-  let pass = CreateUser.findOne({ password: password });
-  let passToSTR = pass.toString();
-
-  if (user) {
-    bcrypt.compare(password, passToSTR).then(function (result) {
-      if (result == false) {
-        res
-          .status(200)
-          .render(path.join(__dirname, "..", "views", "secrets.ejs"));
-      } else {
-        res.status(200).render(path.join(__dirname, "..", "views", "login.ejs"));
-      }
-    });
+  const userEmail = await FindUser.findOne({email: username});
+  if(userEmail) {
+    res.status(200).render(path.join(__dirname, '..', 'views', 'secrets.ejs'));
   } else {
-    res.status(200).render(path.join(__dirname, "..", "views", "login.ejs"));
-    console.log(err);
+    res.status(200).render(path.join(__dirname, '..', 'views', 'login.ejs'));
   }
-
-  // bcrypt.compare(pass, user, function (err, result) {
-
-  // });
 });
 
 module.exports = rootRouter;
 
-// "email": "email.cool@hotmail.com",
-// "password": 123456,
