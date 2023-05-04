@@ -2,8 +2,7 @@ const express = require("express");
 const rootRouter = express.Router();
 const path = require("path");
 
-const CreateUser = require("../models/user.model.js");
-const FindUser  = require("../models/user.model.js");
+const FindUser = require("../models/user.model.js");
 
 rootRouter.get("/", (req, res) => {
   res.status(200).render(path.join(__dirname, "..", "views", "home.ejs"));
@@ -26,7 +25,7 @@ rootRouter.post("/register", (req, res) => {
     let email = req.body.email;
     let password = hash;
 
-    let newUser = new CreateUser({ email, password });
+    let newUser = new FindUser({ email, password });
 
     try {
       let user = await newUser.save();
@@ -41,17 +40,23 @@ rootRouter.post("/register", (req, res) => {
   });
 });
 
-rootRouter.post("/login", async function(req,res) {
+rootRouter.post("/login", async (req, res) => {
   const username = req.body.email;
   const password = req.body.password;
 
-  const userEmail = await FindUser.findOne({email: username});
-  if(userEmail) {
-    res.status(200).render(path.join(__dirname, '..', 'views', 'secrets.ejs'));
-  } else {
-    res.status(200).render(path.join(__dirname, '..', 'views', 'login.ejs'));
-  }
+  const userEmail = await FindUser.findOne({ email: username });
+  console.log(userEmail.password);
+
+  bcrypt.compare(password, userEmail.password, function (err, result) {
+    if (result === true) {
+      res
+        .status(200)
+        .render(path.join(__dirname, "..", "views", "secrets.ejs"));
+    } else {
+      res.status(200).render(path.join(__dirname, "..", "views", "login.ejs"));
+
+    }
+  });
 });
 
 module.exports = rootRouter;
-
