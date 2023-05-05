@@ -45,7 +45,6 @@ rootRouter.post("/login", async (req, res) => {
   const password = req.body.password;
 
   const userEmail = await FindUser.findOne({ email: username });
-  console.log(userEmail.password);
 
   bcrypt.compare(password, userEmail.password, function (err, result) {
     if (result === true) {
@@ -54,7 +53,6 @@ rootRouter.post("/login", async (req, res) => {
         .render(path.join(__dirname, "..", "views", "secrets.ejs"));
     } else {
       res.status(200).render(path.join(__dirname, "..", "views", "login.ejs"));
-
     }
   });
 });
