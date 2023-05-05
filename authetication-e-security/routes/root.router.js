@@ -2,15 +2,16 @@ const express = require("express");
 const rootRouter = express.Router();
 const path = require("path");
 
-const FindUser = require("../models/user.model.js");
+const CreateUser = require("../models/user.model.js");
+const passport = require("passport");
+
+passport.use(CreateUser.createStrategy());
+passport.serializeUser(CreateUser.serializeUser());
+passport.deserializeUser(CreateUser.deserializeUser());
 
 rootRouter.get("/", (req, res) => {
   res.status(200).render(path.join(__dirname, "..", "views", "home.ejs"));
 });
-
-// const md5 = require("md5");
-const bcrypt = require("bcrypt");
-const saltRound = 10;
 
 rootRouter.get("/login", (req, res) => {
   res.status(200).render(path.join(__dirname, "..", "views", "login.ejs"));
@@ -20,41 +21,30 @@ rootRouter.get("/register", (req, res) => {
   res.status(200).render(path.join(__dirname, "..", "views", "register.ejs"));
 });
 
-rootRouter.post("/register", (req, res) => {
-  bcrypt.hash(req.body.password, saltRound, async function (err, hash) {
-    let email = req.body.email;
-    let password = hash;
-
-    let newUser = new FindUser({ email, password });
-
-    try {
-      let user = await newUser.save();
-      res
-        .status(200)
-        .render(path.join(__dirname, "..", "views", "secrets.ejs"));
-      console.log(user);
-    } catch (error) {
-      res.status(500).send({ error: "Can't Create a user :( " });
-      console.log(error);
-    }
-  });
+rootRouter.get("/secrets", (req, res) => {
+  if (req.isAuthenticated()) {
+    res.status(200).render(path.join(__dirname, "..", "views", "secrets.ejs"));
+  } else {
+    res.status(200).render(path.join(__dirname, "..", "views", "login.ejs"));
+  }
 });
 
-rootRouter.post("/login", async (req, res) => {
-  const username = req.body.email;
-  const password = req.body.password;
-
-  const userEmail = await FindUser.findOne({ email: username });
-
-  bcrypt.compare(password, userEmail.password, function (err, result) {
-    if (result === true) {
-      res
-        .status(200)
-        .render(path.join(__dirname, "..", "views", "secrets.ejs"));
-    } else {
-      res.status(200).render(path.join(__dirname, "..", "views", "login.ejs"));
+rootRouter.post("/register", async (req, res) => {
+  CreateUser.register(
+    { username: req.body.email },
+    req.body.password, function(err, user) {
+      if(err) {
+        console.log(err);
+        res.redirect(path.join(__dirname, "..", "views", "register.ejs"))
+      } else {
+        passport.authenticate("local" ,(req,res,) => {
+          res.redirect(path.join(__dirname, "..", "views", "secrets.ejs"))
+        })
+      }
     }
-  });
+  );
 });
+
+rootRouter.post("/login", async (req, res) => {});
 
 module.exports = rootRouter;
