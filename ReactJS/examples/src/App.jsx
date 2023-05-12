@@ -6,7 +6,6 @@ import Footer from "./components/Footer/Footer";
 import Notes from "./components/Notes/Notes";
 
 
-
 const App = () => {
   return (
     <>
@@ -14,7 +13,7 @@ const App = () => {
       <div className="App">
         <Notes 
           title="Note 01"
-          note="Hello World!"
+          note="Hello"
         />
       </div>
       < Footer/ >
