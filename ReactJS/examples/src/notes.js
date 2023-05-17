@@ -63,3 +63,5 @@ const notes = [
       "For me, there’s nothing worse than finding random sheets of paper stashed in different notebooks, drawers and bags, and wondering what they refer to.",
   },
 ];
+
+export default notes;

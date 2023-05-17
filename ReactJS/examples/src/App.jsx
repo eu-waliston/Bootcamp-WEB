@@ -5,18 +5,24 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Notes from "./components/Notes/Notes";
 
+import notes from "./notes";
 
 const App = () => {
   return (
     <>
-    <Header />
+      <Header />
       <div className="App">
-        <Notes 
-          title="Note 01"
-          note="Hello"
-        />
+        {notes.map( notesItem => {
+          return (
+            <Notes
+              key={notesItem.key}
+              title={notesItem.title}
+              content={notesItem.content}
+            />
+          )
+        })}
       </div>
-      < Footer/ >
+      < Footer />
     </>
 
   )
