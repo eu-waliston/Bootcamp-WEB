@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css"
 
 import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
 import Notes from "./components/Notes/Notes";
 
 import notes from "./notes";
@@ -22,7 +21,6 @@ const App = () => {
           )
         })}
       </div>
-      < Footer />
     </>
 
   )
