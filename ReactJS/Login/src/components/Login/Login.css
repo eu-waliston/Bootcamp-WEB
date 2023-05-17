@@ -1,0 +1,57 @@
+::placeholder {
+  font-family: "Nunito", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+
+.container {
+  color: #fff;
+  text-align: center;
+  height: 30vh;
+  position: relative;
+  top: 30%;
+}
+
+.login--greats {
+  font-size: 3rem;
+}
+
+.form {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 5%;
+}
+
+form input {
+  width: 250px;
+  height: 50px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+
+}
+
+input:focus{
+    outline: none;
+}
+button {
+  height: 45px;
+  width: 70%;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  position: relative;
+  left: 45px;
+  color: rgb(41, 73, 121);
+  cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(110%);
+}
