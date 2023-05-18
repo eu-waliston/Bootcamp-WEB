@@ -1,11 +1,11 @@
-.App {
+ .App {
     background-color: rgb(26, 26, 26);
     color: #fff;
     text-align: center;
     width: 100%;
     height: 100vh;
 }
-
+/*
 .App h1 {
     position: relative;
     top: 20%;
@@ -19,4 +19,4 @@ button {
     width: 40%;
     font-size: 1rem;
     cursor: pointer;
-}
+} */
