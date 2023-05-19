@@ -1,0 +1,16 @@
+.strike {
+    position: relative;
+    top: 20%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.btn {
+    position: relative;
+    margin-left: 21px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 30px;
+}
