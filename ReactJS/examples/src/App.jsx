@@ -2,14 +2,16 @@ import React from "react"
 import "./App.css"
 
 
-import Count from "./components/count/Count"
-import Strike from "./components/strike/Strike"
+// import Count from "./components/count/Count"
+// import Strike from "./components/strike/Strike"
+import EventHandling from "./components/event/EventHandling"
 
 const App = () => {
   return (
     <div className="App">
-        <Count />
-        <Strike />
+        {/* <Count />
+        <Strike /> */}
+        <EventHandling />
     </div>
   )
 }
