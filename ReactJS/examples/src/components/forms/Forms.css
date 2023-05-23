@@ -1,0 +1,38 @@
+.react_form {
+    text-align: center;
+    position: relative;
+
+
+    color: #fff;
+
+    position: relative;
+
+    top: 10%;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.felçx {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 10%;
+
+}
+
+.felçx input {
+    width: 200px;
+    height: 40px;
+}
+
+.felçx input::placeholder {
+    text-align: center;
+}
+
+.felçx button {
+    position: relative;
+    top: 40px;
+    width: 130px;
+    height: 30px;
+}
