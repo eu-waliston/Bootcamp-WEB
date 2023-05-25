@@ -6,15 +6,18 @@ import "./App.css"
 // import Strike from "./components/strike/Strike"
 // import EventHandling from "./components/event/EventHandling"
 // import Forms from "./components/forms/Forms"
-import ComplexState from "./components/complexState/ComplexState"
+// import ComplexState from "./components/complexState/ComplexState"
+import Chalange from "./components/chalanges/Chalange"
+
 
 const App = () => {
   return (
     <div className="App">
         {/* <Count />
         <Strike />
-        <Forms /> */}
-        < ComplexState />
+        <Forms />
+        < ComplexState /> */}
+        <Chalange />
     </div>
   )
 }
