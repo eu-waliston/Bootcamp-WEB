@@ -1,0 +1,28 @@
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    top: 20%;
+}
+
+.container form {
+    display: grid;
+
+}
+
+.container input {
+    margin-top: 5px;
+   margin-bottom: 10px;
+   width: 250px;
+   height: 40px;
+   text-align: center;
+}
+.container button {
+    height: 40px;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
