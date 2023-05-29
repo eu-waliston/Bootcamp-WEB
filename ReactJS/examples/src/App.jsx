@@ -7,7 +7,9 @@ import "./App.css"
 // import EventHandling from "./components/event/EventHandling"
 // import Forms from "./components/forms/Forms"
 // import ComplexState from "./components/complexState/ComplexState"
-import Chalange from "./components/chalanges/Chalange"
+// import Chalange from "./components/chalanges/Chalange"
+import TODO from "./components/ToDo/ToDo"
+
 
 
 const App = () => {
@@ -16,8 +18,9 @@ const App = () => {
         {/* <Count />
         <Strike />
         <Forms />
-        < ComplexState /> */}
-        <Chalange />
+        < ComplexState />
+        <Chalange /> */}
+        < TODO />
     </div>
   )
 }
