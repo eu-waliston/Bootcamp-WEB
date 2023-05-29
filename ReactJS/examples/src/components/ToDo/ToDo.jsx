@@ -11,6 +11,7 @@ const TODO = () => {
     function handleChange(event) {
         const newValue = event.target.value;
         setInputText(newValue);
+
     }
 
     function addItem() {
@@ -24,6 +25,7 @@ const TODO = () => {
         setItems((prevItens) => {
             return prevItens.filter(
                 (item, index ) => {
+       
                     return index !== id
                 }
             )
@@ -55,8 +57,8 @@ const TODO = () => {
                             id={index}
                             title={todoItem}
                             onChecked={deleteIten}
+                          
                         />
-
                     ))}
                 </ul>
             </div>

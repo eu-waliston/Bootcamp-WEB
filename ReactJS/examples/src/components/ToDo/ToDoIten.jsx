@@ -17,6 +17,7 @@ const ToDiIten = (props) => {
                 {props.title}
             </li>
 
+
             <i className="bi bi-trash2" onClick={() => {
                 props.onChecked(props.id);
             }}></i>
