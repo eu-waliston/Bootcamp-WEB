@@ -89,11 +89,12 @@ form textarea {
   font-family: inherit;
   resize: none;
 }
-form button {
+
+.btn--ssc {
   position: absolute;
   right: 18px;
   bottom: -18px;
-  background: #f5ba13;
+  background: #f5ba13 !important;
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -102,6 +103,16 @@ form button {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
+  position: relative;
+  margin-left: 90% !important;
+  top: 30px;
+}
+
+.btn--ssc:hover {
+  background-color: #ececec !important;
+  border: 2px solid #f5ba13;
+  color: #f5ba13 !important;
+  transform: .5s;
 }
 
 .bi-trash2-fill {
